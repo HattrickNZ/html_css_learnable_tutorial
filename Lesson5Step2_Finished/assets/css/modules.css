@@ -1,0 +1,124 @@
+/* ----------------------------
+banner
+---------------------------- */
+
+.row--banner
+{
+	background-color: #626e6d;
+	background-image: url(../img/banner-small.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;  /*cover is good it allows us to cover the whole element with this background-image*/
+}
+/* at widescreen or a screen/viewport > 38em this media query will come into affect */
+@media (min-width: 38em)
+{
+	.row--banner { background-image: url(../img/banner.jpg) }
+}
+
+/* ----------------------------
+header
+---------------------------- */
+
+.header  /* our first selector is header */
+{
+	padding: 1.25em 1em; /* top and bottom = 1.25em and left and right = 1em*/
+	/* 20px/16px -  16px/16px */
+}
+
+.header__logo
+{
+	float: left;
+	padding-top: .2em;
+}
+
+.header__nav
+{
+	float: right;
+	width: 150px; /* normally uses em's but here using px's for this small screen version */
+}
+
+.header__nav ul    /* do a descendent seletor and work in the ul */
+{
+	margin: 0;  /* turn off the margins and paddings */
+	padding: 0;
+	list-style: none;  /* get rid of the list style */
+	text-align: right;
+}
+
+.header__nav li
+{
+	display: inline-block; /* display inline-block and turn off all margins so they sit beside each other */ 
+	margin: 0;
+}
+
+.header__nav a  /* style the a element */  /* had underscore missing here .header_nav */
+{
+	display: block; /* a elements are inline elements but need to change it to block element */
+	margin-right: .2em;
+	padding: 0.6em 1em 0.4em; /* think it's top=0.6em left and right =1em and bottom =0.4em*/
+	border-radius: .3em;
+	color: #fff;  /* #fff; = white */
+	background: none;
+	font-size: 0.8125em; /* 13px/16px */
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.header__nav-contact a { margin-right: 0; }
+
+.current a  /* style the a element when it is current using the class of current */
+{
+	color: #fff; /* #fff; = white */
+	background: #56b880;
+}
+
+/* style the elements in focus hover and active 
+   this can assist all users including keyboard users */
+
+.header__nav a:focus { background: #000; }
+.header__nav a:hover { background: #3bb2d0; }
+.header__nav a:active { background: #af0000;}
+
+/* at widescreen or a screen/viewport > 38em this media query will come into affect */
+@media (min-width: 38em)
+{
+	.header  /* our first selector is header */
+	{
+		padding: 2.2222em 2em; /* top and bottom = 2.222em and left and right = 2em*/
+		/* 40px/18px -  36px/18px */
+	}
+	
+	.header__nav { width: 12em; }  /* note using em's here as apposed to px's above */
+
+	.header__nav a  /* style the a element */  /* had underscore missing here .header_nav */
+	{
+		font-size: 0.8333em; /* 15px/18px */
+
+	}
+}
+
+/* ----------------------------
+banner-content
+---------------------------- */
+
+/* ----------------------------
+features
+---------------------------- */
+
+/* ----------------------------
+testimonials
+---------------------------- */
+
+/* ----------------------------
+facts
+---------------------------- */
+
+/* ----------------------------
+press
+---------------------------- */
+
+/* ----------------------------
+footer
+---------------------------- */
+

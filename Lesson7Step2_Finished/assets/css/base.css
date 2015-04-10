@@ -1,0 +1,70 @@
+/* ----------------------------
+base
+---------------------------- */
+html,
+body
+{
+	color: #777;  		/* #777 deep grey */
+	background: #fff;  /* #fff white */
+}
+
+body 
+{
+	margin: 0;
+	padding: 0;
+	font-size: 1em;
+	font-family: helvetica, arial, sans-serif;
+	line-height: 1.3;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+{
+	margin: 0;
+	color: #424242; /* #777 softer grey */
+	line-height: 1.1;
+	
+	
+}
+
+img
+{
+	max-width: 100%;  /* 100% they will never go wider than there actual size */
+	height: auto;     /* #auto so don't get them squashing  */
+	border: 0;	/* border set to 0 so don't get any borders  */
+	vertical-align: middle;
+}
+
+
+/* focus hover and active states  */
+a:focus img  {background: #000; }     
+a:hover img  {background: #3bb2d0; }
+a:active img  {background: #af0000; }
+blockquote { margin: 0; }
+
+
+/* ----------------------------
+wide
+---------------------------- */
+
+/* write media queries here 
+	want to increase font size if it(the screen?) is bigger than a certain size 
+  */
+
+@media (min-width: 38em)
+{
+	body
+	{
+		font-size:1.125em; /* maths for this is 18px/16px */
+		
+	}
+
+}
+
+
+
+

@@ -1,0 +1,150 @@
+/* ----------------------------
+layout
+---------------------------- */
+
+/* row */
+.row
+{
+	clear: both;  /* clear any row above */
+	overflow: hidden; /* wrap around any floated items inside */
+	
+}
+
+/* row-colors */   /* style the colors here  */   
+
+.row--white { background: #fff; }
+.row--grey { background: #f8f8f8; }
+.row--blue { background: #3bb2d0; }
+
+.row--dark-grey 
+{ 
+	color: #fff;   /* #fff; color of white */
+	background: #282e37;  /* #282e37; color of softish grey  */
+}
+
+/* .row--banner { background: #aaa; }   /* removed as a fake background */
+
+/* row-padding */
+.row--padding-medium
+{
+	padding-top: 2.1875em;
+	padding-bottom: 2.1875em;
+	/* maths here is 35px/16px 
+		at small screen the padding is 35px*/
+	
+}
+
+.row--padding-wide    /* for now this is the same as above */
+{
+	padding-top: 2.1875em;
+	padding-bottom: 2.1875em;
+	/* maths here is 35px/16px 
+		at small screen the padding is 35px*/
+	
+}
+
+
+/* containers */
+
+.container-narrow,
+.container-medium,
+.container-wide
+{
+	margin: 0 auto;		/* auto margins on left and right which means it will be centered inside our rows*/
+	padding-left: 1.5em;  /* this padding creates a bit of a gutter*/
+	padding-right: 1.5em;
+}
+
+
+
+.container-narrow  /*style them induividually  */
+{
+	max-width: 34em;  /* it can go smaller than 34em but never wider */
+	/* background: yellow;   /* fake background color just so we can see it */ /* removed as a fake background */
+}
+
+
+.container-medium /*style them induividually  */
+{
+	max-width: 52em;  /* it can go smaller than 52em but never wider */
+	/* background: green;   /* fake background color just so we can see it */ /* removed as a fake background */
+}
+
+.container-wide  /*style them induividually  */
+{
+	max-width: 58em;  /* it can go smaller than 58em but never wider */
+	/* background: lime;   /* fake background color just so we can see it */ /* removed as a fake background */
+}
+
+
+/* columns */
+/* removed as a fake background */
+/*.col-narrow { background: pink; }
+.col-narrow--right { background: pink; }
+.col-medium { background: silver; }
+.col-wide { background: aqua; }
+.col-wide--right { background: aqua; } */
+/* removed as a fake background */
+
+.col-narrow,
+.col-narrow--right { margin-bottom:1.5em; }   /* 1.5em so at small screen the images will sit a bit away from the text */
+
+
+
+/* ----------------------------
+wide
+---------------------------- */
+
+@media (min-width: 38em)  /* this will happen if the minimum viewport is a minimum of 38em*/ 
+{
+	.row--padding-medium
+	{
+		padding-top: 3.8889em;
+		padding-bottom: 3.8889em;
+		
+		/* 	18px here as have changed the font size
+			maths here is 70px/18px 
+			at small screen the padding is 35px*/
+		
+	}
+
+	.row--padding-wide    /* for now this is the same as above */
+	{
+		padding-top: 5.5556em;
+		padding-bottom: 5.5556em;
+		
+		/* 	18px here as have changed the font size
+			maths here is 100px/18px 
+			at small screen the padding is 35px*/
+		
+	}
+	
+	.container-narrow,
+	.container-medium,
+	.container-wide
+	{
+		padding-left: 2em;  /* this padding creates a bit more gutter (i.e. 2em) at wide screen (as opposed to the 1.5em above )*/
+		padding-right: 2em;
+	}
+	
+	.col-narrow,
+	.col-medium,
+	.col-wide { float: left;}
+	.col-narrow--right,
+	.col-wide--right { float: right;}
+	
+	.col-wide,
+	.col-wide--right { width: 61%;}
+	
+	.col-medium { width: 50%;}
+	
+	.col-narrow,
+	.col-narrow--right 
+	{ 
+		width: 25%;
+		margin-bottom: 0; /* take of the margin defined above (of 1.5em) when we are at wide screen*/
+	}
+
+
+}
+
